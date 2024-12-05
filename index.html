@@ -82,7 +82,7 @@
         <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
       </nav>
 
-      <a class="btn-getstarted" href="index.html#book-a-table">En direct</a>
+      <a class="btn-getstarted" href="direct.html" >En direct</a>
 
     </div>
   </header>
@@ -99,7 +99,8 @@
           <div class="col-lg-5 order-2 order-lg-1 d-flex flex-column justify-content-center">
             <h1 data-aos="fade-up">SION RADIO<br>La Radio de la Joie</h1>
             <p data-aos="fade-up" data-aos-delay="100">
-              Partagez la bonne nouvelle du Christ à travers le monde avec une programmation 100% Gospel !
+              <strong style="color: black;"> Partagez la bonne nouvelle du Christ à travers le monde avec une
+                programmation 100% Gospel !</strong>
             </p>
             <div class="d-flex" data-aos="fade-up" data-aos-delay="200">
               <a href="#live" class="btn-get-started">Écouter en Direct</a>
@@ -108,11 +109,17 @@
 
           <!-- Lecteur radio -->
           <div class="col-lg-5 order-1 order-lg-2 hero-img" data-aos="zoom-out">
-            <iframe class="img-fluid animated"
+
+            <iframe class="img-fluid animated" 
+              src="https://player.radioking.io/sion-radio-gospel/?c=%23167176&c2=%23ffffff&f=v&i=1&p=1&s=0&li=1&popup=1&plc=NaN&h=365&l=undefined&v=2"
+              style="border-radius: 5px; width: 100%; height: 365px;  box-shadow: 0px 0px 20px 0px rgba(0,0,0,0.3);"  frameBorder="0"></iframe>
+            
+            <!-- <iframe class="img-fluid animated"
               src="https://player.radioking.io/sion-radio-gospel/?c=%231e7fcb&c2=%23ffffff&f=v&i=1&p=1&s=1&li=1&popup=1&plc=NaN&h=365&l=undefined&v=2&autoplay=1"
               style="border-radius: 5px; width: 100%; height: 365px; box-shadow: 0px 0px 20px 0px rgba(0,0,0,0.3);"
               frameBorder="0">
-            </iframe>
+            </iframe> -->
+
             <script type="text/javascript" src="https://player.radioking.io/scripts/iframe.bundle.js"></script>
           </div>
         </div>
@@ -141,46 +148,61 @@
               <img src="img/15.png" class="img-fluid mb-4" alt="SION RADIO en direct" />
             </div>
           </div>
-          
+
           <div class="col-lg-5" data-aos="fade-up" data-aos-delay="250">
             <div class="content ps-0 ps-lg-5">
               <!-- Introduction -->
               <p class="fst-italic">
-                SION RADIO est née d'une inspiration divine reçue depuis de longues années. En effet, SION RADIO est une web radio en ligne, avec une couverture active dans tous les pays du monde.
+                SION RADIO est née d'une inspiration divine reçue depuis de longues années. En effet, SION RADIO est une
+                web radio en ligne, avec une couverture active dans tous les pays du monde.
               </p>
-        
+
               <!-- Liste des points forts -->
               <ul>
                 <li><i class="bi bi-check-circle-fill"></i> <span>SION RADIO c'est du 100% Gospel !</span></li>
-                <li><i class="bi bi-check-circle-fill"></i> <span>SION RADIO, ce sont des messages édifiants !</span></li>
-                <li><i class="bi bi-check-circle-fill"></i> <span>SION RADIO, ce sont des exhortations remplies d'onction !</span></li>
+                <li><i class="bi bi-check-circle-fill"></i> <span>SION RADIO, ce sont des messages édifiants !</span>
+                </li>
+                <li><i class="bi bi-check-circle-fill"></i> <span>SION RADIO, ce sont des exhortations remplies
+                    d'onction !</span></li>
               </ul>
-        
+
               <!-- Objectif de la station -->
               <p>
-                Notre objectif est de partager l'Évangile de Christ Ressuscité à l’échelle mondiale et le rendre accessible à tous, via le Net.
+                Notre objectif est de partager l'Évangile de Christ Ressuscité à l’échelle mondiale et le rendre
+                accessible à tous, via le Net.
               </p>
-        
+
               <!-- Appel à l'action : promotion des offres -->
               <p>
-                Vous souhaitez que votre logo ainsi que vos messages soient visibles sur notre page ? Désirez-vous que vos vidéos soient vues par des milliers de personnes dans le monde entier ? Souhaitez-vous avoir une promotion gratuite et une meilleure visibilité en ligne ?
+                Vous souhaitez que votre logo ainsi que vos messages soient visibles sur notre page ? Désirez-vous que
+                vos vidéos soient vues par des milliers de personnes dans le monde entier ? Souhaitez-vous avoir une
+                promotion gratuite et une meilleure visibilité en ligne ?
               </p>
               <p>
-                Tout ceci est possible ! Serviteurs et Servantes de Dieu, Responsables d'Église et de Centres de Prières, SION RADIO met à votre disposition une panoplie d’offres gratuites pour la promotion de vos activités en ces temps particuliers.
+                Tout ceci est possible ! Serviteurs et Servantes de Dieu, Responsables d'Église et de Centres de
+                Prières, SION RADIO met à votre disposition une panoplie d’offres gratuites pour la promotion de vos
+                activités en ces temps particuliers.
               </p>
-        
+
               <!-- Call to action button -->
               <a href="contact.html" class=" mt-4" role="button">Contactez-nous pour plus d’informations</a>
-              
+
               <!-- Video Section -->
               <div class="position-relative mt-4">
+                <!-- Image de fond -->
                 <img src="img/12.png" class="img-fluid" alt="Écoutez SION RADIO en vidéo" />
-                <a href="https://youtu.be/abmlSA8Jp3I?si=zHrhdTpx2nKmjAFW" class="glightbox pulsating-play-btn" title="Regardez notre vidéo en direct"></a>
+
+                <!-- Bouton Play pulsant -->
+                <a class=" pulsating-play-btn" id="play-radio"></a>
               </div>
+
+              <!-- Lecteur Audio caché -->
+              <audio id="sion-radio" src="https://play.radioking.io/sion-radio-gospel" preload="none"></audio>
+
             </div>
           </div>
         </div>
-        
+
 
       </div>
 
@@ -688,6 +710,23 @@
 
   <!-- Preloader -->
   <div id="preloader"></div>
+  <script>
+    const playButton = document.getElementById('play-radio');
+    const audioPlayer = document.getElementById('sion-radio');
+
+    playButton.addEventListener('click', (event) => {
+      event.preventDefault();
+      if (audioPlayer.paused) {
+        audioPlayer.play();
+        playButton.title = 'Arrêtez la radio';
+        playButton.style.background = 'rgba(0, 255, 0, 0.8)'; // Change de couleur pour indiquer l'état "lecture"
+      } else {
+        audioPlayer.pause();
+        playButton.title = 'Écoutez notre radio en direct';
+        playButton.style.background = 'rgba(255, 0, 0, 0.8)'; // Retour à l'état initial
+      }
+    });
+  </script>
 
   <!-- Vendor JS Files -->
   <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
