@@ -1,21 +1,17 @@
- <nav id="navmenu" class="navmenu">
-        <ul>
-          <li><a href="index.html" class="active">Accueil<br></a></li>
-          <li><a href="apropos.html">À propos</a></li>
-          <li><a href="apropos.html">Programmes</a></li>
-          <li><a href="apropos.html">Partenariats</a></li>
-          <li class="dropdown"><a href="#"><span>Nous Soutenir</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>
-            <ul>
-              <li><a href="partenaire.html">Faire un Don</a></li>
-              <li><a href="partenaire.html">Soutien et Financement</a></li>
-              <li><a href="partenaire.html">Vos Témoignages</a></li>
-            </ul>
-          </li>
-          <li><a href="mission.html">Mission et Équipe</a></li>
-          <li><a href="contact.html">Contact</a></li>
+<script>
+  emailjs.init("ymntp5Kznj5IcWZ8e"); // Remplacez par votre clé publique EmailJS
 
-          
-        
-        </ul>
-        <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
-      </nav>
+  document.getElementById('contact-form').addEventListener('submit', function (event) {
+    event.preventDefault(); // Empêche le rechargement de la page
+
+    emailjs.sendForm('service_zcooc5v', 'template_5b5pr0v', this)
+      .then(function () {
+        // Initialiser le toast
+        var toastEl = document.querySelector('.toast');
+        var toast = new bootstrap.Toast(toastEl);
+        toast.show();
+      }, function (error) {
+        alert('Erreur lors de l\'envoi du message : ' + error.text);
+      });
+  });
+</script>
