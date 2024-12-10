@@ -33,6 +33,8 @@
   <!-- Main CSS File -->
   <link href="assets/css/main.css" rel="stylesheet">
 
+  <script src="https://api.feexpay.me/feexpay-javascript-sdk/index.js"></script>
+
 </head>
 
 <body class="starter-page-page">
@@ -48,7 +50,6 @@
 
       <nav id="navmenu" class="navmenu">
         <ul>
-          <li><a href="index.html">Accueil<br></a></li>
           <li><a href="index.html">Accueil<br></a></li>
           <li><a href="joie.html">La Joie, toute une histoire</a></li>
           <li><a href="partenaire.html">Devenez partenaire</a></li>
@@ -88,6 +89,8 @@
   </header>
 
   <main class="main">
+
+
 
     <!-- Page Title -->
     <div class="page-title" data-aos="fade"
@@ -202,9 +205,10 @@
                   </div>
                 </div>
                 <div class="card-footer">
-                  <a href="contact.html" class="btn btn-success w-100">
-                    Nous soutenir
+                  <a href="#" class="btn btn-success w-100" data-bs-toggle="modal" data-bs-target="#donationModal">
+                    Faire un don
                   </a>
+
                 </div>
               </div>
             </div>
@@ -257,20 +261,20 @@
         </div>
     </section>
 
-        <!-- Testimonials Section -->
-        <section id="testimonials" class="testimonials section light-background"
-            style="position: relative; background-image: url('img/testimonials-bg.jpg'); background-size: cover; background-position: center;">
+    <!-- Testimonials Section -->
+    <section id="testimonials" class="testimonials section light-background"
+      style="position: relative; background-image: url('img/testimonials-bg.jpg'); background-size: cover; background-position: center;">
 
-            <!-- Section Title -->
-            <div class="container section-title" data-aos="fade-up" style="position: relative; z-index: 2;">
-                <h2>Temoignages</h2>
-                <p>Découvrez ce que <span class="description-title">nos auditeurs pensent de nous</span></p>
-            </div><!-- End Section Title -->
+      <!-- Section Title -->
+      <div class="container section-title" data-aos="fade-up" style="position: relative; z-index: 2;">
+        <h2>Temoignages</h2>
+        <p>Découvrez ce que <span class="description-title">nos auditeurs pensent de nous</span></p>
+      </div><!-- End Section Title -->
 
-            <div class="container" data-aos="fade-up" data-aos-delay="100" style="position: relative; z-index: 2;">
+      <div class="container" data-aos="fade-up" data-aos-delay="100" style="position: relative; z-index: 2;">
 
-                <div class="swiper init-swiper">
-                    <script type="application/json" class="swiper-config">
+        <div class="swiper init-swiper">
+          <script type="application/json" class="swiper-config">
           {
             "loop": true,
             "speed": 600,
@@ -285,139 +289,136 @@
             }
           }
         </script>
-                    <div class="swiper-wrapper">
-                        <div class="swiper-slide">
-                            <div class="testimonial-item">
-                                <div class="row gy-4 justify-content-center">
-                                    <div class="col-lg-6">
-                                        <div class="testimonial-content">
-                                            <p>
-                                                <i class="bi bi-quote quote-icon-left"></i>
-                                                <span>"SION RADIO est bien plus qu'une simple station. C'est un
-                                                    véritable moteur d'inspiration dans ma vie. Les messages sont
-                                                    toujours édifiants et remplis de sagesse. J'écoute tous les jours,
-                                                    et cela me renforce dans ma foi."</span>
-                                                <i class="bi bi-quote quote-icon-right"></i>
-                                            </p>
-                                            <h3>Marie Dupont</h3>
-                                            <h4>Auditrice fidèle</h4>
-                                            <div class="stars">
-                                                <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i
-                                                    class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i
-                                                    class="bi bi-star-fill"></i>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="col-lg-2 text-center">
-                                        <img src="assets/img/testimonials/testimonials-1.jpg"
-                                            class="img-fluid testimonial-img" alt="Marie Dupont">
-                                    </div>
-                                </div>
-                            </div>
-                        </div><!-- End testimonial item -->
-
-                        <div class="swiper-slide">
-                            <div class="testimonial-item">
-                                <div class="row gy-4 justify-content-center">
-                                    <div class="col-lg-6">
-                                        <div class="testimonial-content">
-                                            <p>
-                                                <i class="bi bi-quote quote-icon-left"></i>
-                                                <span>"Une radio unique, où chaque message résonne profondément dans le
-                                                    cœur. Les animateurs sont passionnés et l'atmosphère qu'ils créent
-                                                    est vraiment spéciale. J'ai découvert une nouvelle source de paix
-                                                    intérieure grâce à SION RADIO."</span>
-                                                <i class="bi bi-quote quote-icon-right"></i>
-                                            </p>
-                                            <h3>Jacques Leroy</h3>
-                                            <h4>Auditeur passionné</h4>
-                                            <div class="stars">
-                                                <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i
-                                                    class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i
-                                                    class="bi bi-star-fill"></i>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="col-lg-2 text-center">
-                                        <img src="assets/img/testimonials/testimonials-2.jpg"
-                                            class="img-fluid testimonial-img" alt="Jacques Leroy">
-                                    </div>
-                                </div>
-                            </div>
-                        </div><!-- End testimonial item -->
-
-                        <div class="swiper-slide">
-                            <div class="testimonial-item">
-                                <div class="row gy-4 justify-content-center">
-                                    <div class="col-lg-6">
-                                        <div class="testimonial-content">
-                                            <p>
-                                                <i class="bi bi-quote quote-icon-left"></i>
-                                                <span>"SION RADIO m'accompagne tous les jours dans ma vie spirituelle.
-                                                    Chaque émission me touche et m'inspire à vivre ma foi avec plus
-                                                    d'engagement. C'est une bénédiction d'avoir une telle ressource à
-                                                    portée de main."</span>
-                                                <i class="bi bi-quote quote-icon-right"></i>
-                                            </p>
-                                            <h3>Alice Leblanc</h3>
-                                            <h4>Auditrice engagée</h4>
-                                            <div class="stars">
-                                                <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i
-                                                    class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i
-                                                    class="bi bi-star-fill"></i>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="col-lg-2 text-center">
-                                        <img src="assets/img/testimonials/testimonials-3.jpg"
-                                            class="img-fluid testimonial-img" alt="Alice Leblanc">
-                                    </div>
-                                </div>
-                            </div>
-                        </div><!-- End testimonial item -->
-
-                        <div class="swiper-slide">
-                            <div class="testimonial-item">
-                                <div class="row gy-4 justify-content-center">
-                                    <div class="col-lg-6">
-                                        <div class="testimonial-content">
-                                            <p>
-                                                <i class="bi bi-quote quote-icon-left"></i>
-                                                <span>"Un grand merci à l'équipe de SION RADIO pour les merveilleux
-                                                    moments de prière et de méditation partagés. Votre station est une
-                                                    véritable bénédiction pour nous tous."</span>
-                                                <i class="bi bi-quote quote-icon-right"></i>
-                                            </p>
-                                            <h3>François Martin</h3>
-                                            <h4>Auditeur reconnaissant</h4>
-                                            <div class="stars">
-                                                <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i
-                                                    class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i
-                                                    class="bi bi-star-fill"></i>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="col-lg-2 text-center">
-                                        <img src="assets/img/testimonials/testimonials-4.jpg"
-                                            class="img-fluid testimonial-img" alt="François Martin">
-                                    </div>
-                                </div>
-                            </div>
-                        </div><!-- End testimonial item -->
-
+          <div class="swiper-wrapper">
+            <div class="swiper-slide">
+              <div class="testimonial-item">
+                <div class="row gy-4 justify-content-center">
+                  <div class="col-lg-6">
+                    <div class="testimonial-content">
+                      <p>
+                        <i class="bi bi-quote quote-icon-left"></i>
+                        <span>"SION RADIO est bien plus qu'une simple station. C'est un
+                          véritable moteur d'inspiration dans ma vie. Les messages sont
+                          toujours édifiants et remplis de sagesse. J'écoute tous les jours,
+                          et cela me renforce dans ma foi."</span>
+                        <i class="bi bi-quote quote-icon-right"></i>
+                      </p>
+                      <h3>Marie Dupont</h3>
+                      <h4>Auditrice fidèle</h4>
+                      <div class="stars">
+                        <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i
+                          class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i>
+                      </div>
                     </div>
-                    <div class="swiper-pagination"></div>
+                  </div>
+                  <div class="col-lg-2 text-center">
+                    <img src="assets/img/testimonials/testimonials-1.jpg" class="img-fluid testimonial-img"
+                      alt="Marie Dupont">
+                  </div>
                 </div>
+              </div>
+            </div><!-- End testimonial item -->
 
-            </div>
+            <div class="swiper-slide">
+              <div class="testimonial-item">
+                <div class="row gy-4 justify-content-center">
+                  <div class="col-lg-6">
+                    <div class="testimonial-content">
+                      <p>
+                        <i class="bi bi-quote quote-icon-left"></i>
+                        <span>"Une radio unique, où chaque message résonne profondément dans le
+                          cœur. Les animateurs sont passionnés et l'atmosphère qu'ils créent
+                          est vraiment spéciale. J'ai découvert une nouvelle source de paix
+                          intérieure grâce à SION RADIO."</span>
+                        <i class="bi bi-quote quote-icon-right"></i>
+                      </p>
+                      <h3>Jacques Leroy</h3>
+                      <h4>Auditeur passionné</h4>
+                      <div class="stars">
+                        <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i
+                          class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-lg-2 text-center">
+                    <img src="assets/img/testimonials/testimonials-2.jpg" class="img-fluid testimonial-img"
+                      alt="Jacques Leroy">
+                  </div>
+                </div>
+              </div>
+            </div><!-- End testimonial item -->
 
-        </section><!-- /Testimonials Section -->
+            <div class="swiper-slide">
+              <div class="testimonial-item">
+                <div class="row gy-4 justify-content-center">
+                  <div class="col-lg-6">
+                    <div class="testimonial-content">
+                      <p>
+                        <i class="bi bi-quote quote-icon-left"></i>
+                        <span>"SION RADIO m'accompagne tous les jours dans ma vie spirituelle.
+                          Chaque émission me touche et m'inspire à vivre ma foi avec plus
+                          d'engagement. C'est une bénédiction d'avoir une telle ressource à
+                          portée de main."</span>
+                        <i class="bi bi-quote quote-icon-right"></i>
+                      </p>
+                      <h3>Alice Leblanc</h3>
+                      <h4>Auditrice engagée</h4>
+                      <div class="stars">
+                        <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i
+                          class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-lg-2 text-center">
+                    <img src="assets/img/testimonials/testimonials-3.jpg" class="img-fluid testimonial-img"
+                      alt="Alice Leblanc">
+                  </div>
+                </div>
+              </div>
+            </div><!-- End testimonial item -->
 
+            <div class="swiper-slide">
+              <div class="testimonial-item">
+                <div class="row gy-4 justify-content-center">
+                  <div class="col-lg-6">
+                    <div class="testimonial-content">
+                      <p>
+                        <i class="bi bi-quote quote-icon-left"></i>
+                        <span>"Un grand merci à l'équipe de SION RADIO pour les merveilleux
+                          moments de prière et de méditation partagés. Votre station est une
+                          véritable bénédiction pour nous tous."</span>
+                        <i class="bi bi-quote quote-icon-right"></i>
+                      </p>
+                      <h3>François Martin</h3>
+                      <h4>Auditeur reconnaissant</h4>
+                      <div class="stars">
+                        <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i
+                          class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-lg-2 text-center">
+                    <img src="assets/img/testimonials/testimonials-4.jpg" class="img-fluid testimonial-img"
+                      alt="François Martin">
+                  </div>
+                </div>
+              </div>
+            </div><!-- End testimonial item -->
+
+          </div>
+          <div class="swiper-pagination"></div>
+        </div>
+
+      </div>
+
+    </section><!-- /Testimonials Section -->
+
+    <!-- <div id="render"></div> -->
 
 
   </main>
 
-  
+
   <footer id="footer" class="footer dark-background">
     <div class="container">
       <div class="row gy-3">
@@ -438,16 +439,16 @@
             <p>
               <strong>Téléphone:</strong>
               <br>
-              <span>Madagascar:</span> 
+              <span>Madagascar:</span>
               <span>00261 32 38 15 142</span>
               <br> <br>
-              <span>France:</span> 
+              <span>France:</span>
               <span>00 33 7 75 72 28 24 (WhatsApp)</span>
               <br> <br>
-              <span>Bénin:</span> 
+              <span>Bénin:</span>
               <span>00 229 01 66 29 01 02 (WhatsApp)</span>
               <br><br>
-              <strong>E-mail:</strong> 
+              <strong>E-mail:</strong>
               <span>sionradiogospel@gmail.com</span>
             </p>
           </div>
@@ -481,8 +482,41 @@
     </div>
   </footer>
 
-  <a href="#" id="scroll-top" class="scroll-top d-flex align-items-center justify-content-center"><i
-      class="bi bi-arrow-up-short"></i></a>
+  <a href="#" id="scroll-top" class="scroll-top d-flex align-items-center justify-content-center">
+    <i class="bi bi-arrow-up-short"></i>
+  </a>
+
+  <div class="modal fade" id="donationModal" tabindex="-1" aria-labelledby="donationModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="donationModalLabel">Faire un don</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <form id="donationForm">
+            <div class="mb-3">
+              <label for="donationAmount" class="form-label">Montant du don (€)</label>
+              <input type="number" class="form-control" id="donationAmount" placeholder="Entrez le montant" required>
+            </div>
+            <div class="mb-3">
+              <label for="paymentMethod" class="form-label">Mode de paiement</label>
+              <select class="form-select" id="paymentMethod" required>
+                <option value="MOBILE">Mobile Money</option>
+                <option value="CARD">Carte Bancaire</option>
+              </select>
+            </div>
+          </form>
+          <!-- Conteneur pour le bouton généré par FeexPay -->
+          <div id="render" class="mt-3"></div>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Annuler</button>
+          <button type="button" class="btn btn-success" id="confirmDonation">Confirmer</button>
+        </div>
+      </div>
+    </div>
+  </div>
 
   <!-- Preloader -->
   <div id="preloader"></div>
@@ -497,7 +531,7 @@
 
   <!-- Main JS File -->
   <script src="assets/js/main.js"></script>
-
+  <script src="assets/js/paiement.js"></script>
 </body>
 
 </html>
