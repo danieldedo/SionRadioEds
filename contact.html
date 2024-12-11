@@ -117,7 +117,8 @@
               <i class="icon bi bi-geo-alt flex-shrink-0"></i>
               <div>
                 <h3>Adresse</h3>
-                <p>Porto-Novo, Benin</p>
+                <p>Antanarivo (Madagascar)</p>
+                <p>Zogbadjè Calavi (Bénin)</p>
               </div>
             </div>
           </div><!-- End Info Item -->
@@ -206,7 +207,7 @@
             <h3> <strong>Adresse</strong> </h3>
             <p>Antanarivo </p> <span>(Madagascar)</span>
             <br><br>
-            <p>Zogbadjè Calavie</p> <span>(Bénin)</span>
+            <p>Zogbadjè Calavi</p> <span>(Bénin)</span>
           </div>
         </div>
 
@@ -293,42 +294,7 @@
   <!-- Vendor JS Files -->
   <script src="https://cdn.emailjs.com/dist/email.min.js"></script>
   <!-- // Ajoutez ce script à la fin de votre fichier, juste avant la balise </body> -->
-  <script>
-    emailjs.init("ymntp5Kznj5IcWZ8e"); // Remplacez par votre clé publique EmailJS
-
-    document.getElementById('contact-form').addEventListener('submit', function (event) {
-      event.preventDefault(); // Prevent page reload
-
-      // Get the submit button
-      const submitButton = this.querySelector('button[type="submit"]');
-
-      // Disable the button and show loading state
-      submitButton.disabled = true;
-      submitButton.innerHTML = `
-    <span class="spinner-border spinner-border-sm me-2" role="status" aria-hidden="true"></span>
-    Envoi en cours...
-  `;
-
-      emailjs.sendForm('service_zcooc5v', 'template_5b5pr0v', this)
-        .then(function () {
-          // Reset form
-          event.target.reset();
-
-          // Initialise le toast de succès
-          var toastEl = document.querySelector('.toast');
-          var toast = new bootstrap.Toast(toastEl);
-          toast.show();
-        }, function (error) {
-          // Show error alert
-          alert('Erreur lors de l\'envoi du message : ' + error.text);
-        })
-        .finally(function () {
-          // Re-enable the button regardless of success or failur
-          submitButton.disabled = false;
-          submitButton.innerHTML = 'Envoyer un message';
-        });
-    });
-  </script>
+  <script src="assets/js/emailcontact.js"></script>
 
   <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
   <script src="assets/vendor/php-email-form/validate.js"></script>
