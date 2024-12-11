@@ -4,14 +4,15 @@
 <head>
     <meta charset="utf-8">
     <meta content="width=device-width, initial-scale=1.0" name="viewport">
-    <title>Mission - Sion Radio Gospel</title>
+    <title>Sion Radio - Près de chez vous</title>
     <meta name="description"
         content="Soutenez notre mission avec un financement pour continuer à partager la foi et la joie sur Sion Radio.">
     <meta name="keywords" content="financement, partenariat, radio gospel, soutenir">
 
     <!-- Favicons -->
-    <link href="img/logo.png" rel="icon">
-    <link href="img/logo.png" rel="apple-touch-icon">
+    <link href="img/logo1.png" rel="icon">
+    <link href="img/logo1.png" rel="apple-touch-icon">
+
     <!-- Fonts -->
     <link href="https://fonts.googleapis.com" rel="preconnect">
     <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
@@ -28,6 +29,8 @@
 
     <!-- Main CSS File -->
     <link href="assets/css/main.css" rel="stylesheet">
+    <script src="https://api.feexpay.me/feexpay-javascript-sdk/index.js"></script>
+
 
 </head>
 
@@ -37,16 +40,16 @@
         <div class="container position-relative d-flex align-items-center justify-content-between">
 
             <a href="index.html" class="logo d-flex align-items-center me-auto me-xl-0">
-                <!-- <img src="img/logo.png" alt=""> -->
+                <img src="img/logo1.png" alt="">
                 <h1 class="sitename">Sion Radio</h1>
-                <span>.</span>
+
             </a>
 
             <nav id="navmenu" class="navmenu">
                 <ul>
                     <li><a href="index.html">Accueil<br></a></li>
                     <li><a href="joie.html">La Joie, toute une histoire</a></li>
-                    <li><a href="partenaire.html">Devenez partenaires</a></li>
+                    <li><a href="partenaire.html">Devenez partenaire</a></li>
                     <li><a href="mission.html" class="active">Mission et Équipe</a></li>
                     <!-- <li><a href="#chefs">Chefs</a></li>
           <li><a href="#gallery">Gallery</a></li>
@@ -75,7 +78,9 @@
                 <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
             </nav>
 
-            <a class="btn-getstarted" href="direct.html">En direct</a>
+            <a class="btn-getstarted" href="direct.html">
+                <center> En <br> direct</center>
+            </a>
 
         </div>
     </header>
@@ -84,7 +89,7 @@
 
         <!-- Page Title -->
         <div class="page-title" data-aos="fade"
-            style="background: url('img/14.png') no-repeat center center/cover; color: white;">
+            style="background: url('img/16.png') no-repeat center center/cover; color: white;">
             <div class="container">
                 <h1 style="color: white;">Mission et Equipe</h1>
                 <nav class="breadcrumbs">
@@ -337,7 +342,8 @@
                             <div class="card-footer bg-light">
                                 <div class="d-flex justify-content-between align-items-center">
                                     <span class="text-muted">Rejoignez notre mission</span>
-                                    <button class="btn btn-success">Soutenez-nous</button>
+                                    <button class="btn btn-success" data-bs-toggle="modal"
+                                        data-bs-target="#donationModal">Soutenez-nous</button>
                                 </div>
                             </div>
                         </div>
@@ -382,7 +388,7 @@
 
         <!-- Testimonials Section -->
         <section id="testimonials" class="testimonials section light-background"
-            style="position: relative; background-image: url('img/testimonials-bg.jpg'); background-size: cover; background-position: center;">
+            style="position: relative; background-image: url('img/22.png'); background-size: cover; background-position: center;">
 
             <!-- Section Title -->
             <div class="container section-title" data-aos="fade-up" style="position: relative; z-index: 2;">
@@ -545,9 +551,10 @@
                 <div class="col-lg-3 col-md-6 d-flex">
                     <i class="bi bi-geo-alt icon"></i>
                     <div class="address">
-                        <h4>Adresse</h4>
-                        <p>Porto-Novo</p>
-                        <p>Bénin</p>
+                        <h3> <strong>Adresse</strong> </h3>
+                        <p>Antanarivo </p> <span>(Madagascar)</span>
+                        <br><br>
+                        <p>Zogbadjè Calavi</p> <span>(Bénin)</span>
                     </div>
                 </div>
 
@@ -555,7 +562,19 @@
                     <i class="bi bi-telephone icon"></i>
                     <div>
                         <h4>Contact</h4>
-                        <p><strong>Téléphone:</strong> <span>+229 01 96 42 48 84</span><br><strong>E-mail:</strong>
+                        <p>
+                            <strong>Téléphone:</strong>
+                            <br>
+                            <span>Madagascar:</span>
+                            <span>00261 32 38 15 142</span>
+                            <br> <br>
+                            <span>France:</span>
+                            <span>00 33 7 75 72 28 24 (WhatsApp)</span>
+                            <br> <br>
+                            <span>Bénin:</span>
+                            <span>00 229 01 66 29 01 02 (WhatsApp)</span>
+                            <br><br>
+                            <strong>E-mail:</strong>
                             <span>sionradiogospel@gmail.com</span>
                         </p>
                     </div>
@@ -565,8 +584,7 @@
                     <i class="bi bi-clock icon"></i>
                     <div>
                         <h4>Horaires d'ouverture</h4>
-                        <p><strong>Lun-Sam:</strong> <span>11h00 - 23h00</span><br><strong>Dimanche</strong>:
-                            <span>Fermée</span>
+                        <p><strong>24 Heures/24 et 7 Jours/7</strong>
                         </p>
                     </div>
                 </div>
@@ -589,6 +607,39 @@
         </div>
     </footer>
 
+    <div class="modal fade" id="donationModal" tabindex="-1" aria-labelledby="donationModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="donationModalLabel">Faire un don</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <form id="donationForm">
+                        <div class="mb-3">
+                            <label for="donationAmount" class="form-label">Montant du don (€)</label>
+                            <input type="number" class="form-control" id="donationAmount"
+                                placeholder="Entrez le montant" required>
+                        </div>
+                        <div class="mb-3">
+                            <label for="paymentMethod" class="form-label">Mode de paiement</label>
+                            <select class="form-select" id="paymentMethod" required>
+                                <option value="MOBILE">Mobile Money</option>
+                                <option value="CARD">Carte Bancaire</option>
+                            </select>
+                        </div>
+                    </form>
+                    <!-- Conteneur pour le bouton généré par FeexPay -->
+                    <div id="render" class="mt-3"></div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Annuler</button>
+                    <button type="button" class="btn btn-success" id="confirmDonation">Confirmer</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
     <a href="#" id="scroll-top" class="scroll-top d-flex align-items-center justify-content-center"><i
             class="bi bi-arrow-up-short"></i></a>
 
@@ -605,6 +656,7 @@
 
     <!-- Main JS File -->
     <script src="assets/js/main.js"></script>
+    <script src="assets/js/paiement.js"></script>
 
 </body>
 
