@@ -46,7 +46,7 @@
             <nav id="navmenu" class="navmenu">
                 <ul>
                     <li><a href="index.html">Accueil<br></a></li>
-                    <li><a href="joie.html">La Joie, toute une histoire</a></li>
+                    <li><a href="joie.html">La Joie</a></li>
                     <li><a href="partenaire.html">Devenez partenaire</a></li>
                     <li><a href="mission.html" class="active">Mission et Équipe</a></li>
                     <!-- <li><a href="#chefs">Chefs</a></li>
@@ -72,12 +72,14 @@
                     <!-- Nouveau lien vers la page de financement -->
 
                     <li><a href="contact.html">Contact</a></li>
+                            <li><a href="direct.html">En direct</a></li>
+
                 </ul>
                 <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
             </nav>
 
-            <a class="btn-getstarted" href="direct.html">
-                <center> En <br> direct</center>
+            <a class="btn-getstarted" href="#" data-bs-toggle="modal" data-bs-target="#donationModal">
+                <center> <strong>FAIRE <br> UN DON</strong> </center>
             </a>
 
         </div>
@@ -191,6 +193,7 @@
                     </div>
 
                     <div class="col-lg-5" data-aos="fade-left" data-aos-delay="100">
+                      
                         <div class="card border-success mb-4">
                             <div class="card-header bg-success text-white">
                                 <h4 class="card-title mb-0">Équipe Dirigeante</h4>
@@ -200,33 +203,79 @@
                                     <div class="row row-cols-2 g-3">
                                         <div class="col">
                                             <div class="card h-100 text-center">
+                                                <div class="card-img-top">
+                                                    <!-- Emplacement pour la photo du Directeur Technique -->
+                                                    <img src="img/joachim.jpg" alt="Photo de Chédrac Joachim" class="img-fluid rounded-circle my-3"
+                                                        style="max-width: 200px; max-height: 200px; object-fit: cover;">
+                                                </div>
                                                 <div class="card-body">
                                                     <h6 class="card-title">Directeur Technique</h6>
-                                                    <p class="text-muted">Poste à pourvoir</p>
+                                                    <p class="card-text">Chédrac Joachim Adénikè HOUNKANRIN</p>
                                                 </div>
                                             </div>
                                         </div>
-                                        <div class="col">
+                                        <!-- <div class="col">
                                             <div class="card h-100 text-center">
+                                                <div class="card-img-top">
+                                                    <img src="" alt="Photo du Directeur Exécutif" class="img-fluid rounded-circle my-3"
+                                                        style="max-width: 200px; max-height: 200px; object-fit: cover;">
+                                                </div>
                                                 <div class="card-body">
                                                     <h6 class="card-title">Directeur Exécutif</h6>
                                                     <p class="text-muted">Animateur "FANS2JESUS"</p>
                                                 </div>
                                             </div>
-                                        </div>
+                                        </div> -->
                                         <div class="col">
                                             <div class="card h-100 text-center">
+                                                <div class="card-img-top">
+                                                    <!-- Emplacement pour la photo de la Responsable Animation -->
+                                                    <img src="img/gloria.jpeg" alt="Photo de Gloria Renilda" class="img-fluid rounded-circle my-3"
+                                                        style="max-width: 200px; max-height: 200px; object-fit: cover;">
+                                                </div>
                                                 <div class="card-body">
-                                                    <h6 class="card-title">Responsable Intercession</h6>
-                                                    <p class="text-muted">Émission "A la Montagne de SION"</p>
+                                                    <h6 class="card-title">Responsable Animation</h6>
+                                                    <p class="card-text">Gloria Renilda DOSSOU</p>
+                                                    <p class="text-muted">Émission "SION GROOVE SHOW"</p>
                                                 </div>
                                             </div>
                                         </div>
                                         <div class="col">
                                             <div class="card h-100 text-center">
+                                                <div class="card-img-top">
+                                                    <!-- Emplacement pour la photo de l'Assistante de Direction -->
+                                                    <img src="img/valerie.jpeg" alt="Photo de Valérie" class="img-fluid rounded-circle my-3"
+                                                        style="max-width: 200px; max-height: 200px; object-fit: cover;">
+                                                </div>
                                                 <div class="card-body">
-                                                    <h6 class="card-title">Responsable Animation</h6>
-                                                    <p class="text-muted">Émission "SION GROOVE SHOW"</p>
+                                                    <h6 class="card-title">Assistante de Direction</h6>
+                                                    <p class="card-text">Valérie RAKOTOARISON</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col">
+                                            <div class="card h-100 text-center">
+                                                <div class="card-img-top">
+                                                    <!-- Emplacement pour la photo de la Responsable Comptabilité -->
+                                                    <img src="img/belle.jpeg" alt="Photo de Belle" class="img-fluid rounded-circle my-3"
+                                                        style="max-width: 200px; max-height: 200px; object-fit: cover;">
+                                                </div>
+                                                <div class="card-body">
+                                                    <h6 class="card-title">Comptabilité</h6>
+                                                    <p class="card-text">Belle LORNE</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col">
+                                            <div class="card h-100 text-center">
+                                                <div class="card-img-top">
+                                                    <!-- Emplacement pour la photo de la Chargée des Relations -->
+                                                    <img src="img/antsa.jpeg" alt="Photo d'Antsa Fandresena" class="img-fluid rounded-circle my-3"
+                                                        style="max-width: 200px; max-height: 200px; object-fit: cover;">
+                                                </div>
+                                                <div class="card-body">
+                                                    <h6 class="card-title">Chargée des Relations</h6>
+                                                    <p class="card-text">Antsa Fandresena ANDRIANAMBININA</p>
                                                 </div>
                                             </div>
                                         </div>
@@ -235,27 +284,6 @@
                             </div>
                         </div>
 
-                        <div class="card border-info">
-                            <div class="card-header bg-info text-white">
-                                <h4 class="card-title mb-0">Équipe Support</h4>
-                            </div>
-                            <div class="card-body">
-                                <ul class="list-group list-group-flush">
-                                    <li class="list-group-item d-flex justify-content-between align-items-center">
-                                        Belle LORNE
-                                        <span class="badge bg-info">Responsable Service Comptabilité</span>
-                                    </li>
-                                    <li class="list-group-item d-flex justify-content-between align-items-center">
-                                        Assistante de Direction
-                                        <span class="badge bg-info">Assistante de Direction et Designer</span>
-                                    </li>
-                                    <li class="list-group-item d-flex justify-content-between align-items-center">
-                                        Chargée des Relations
-                                        <span class="badge bg-info">Communication</span>
-                                    </li>
-                                </ul>
-                            </div>
-                        </div>
                     </div>
                 </div>
             </div>
@@ -347,11 +375,11 @@
                     </div>
 
                     <div class="col-lg-6" data-aos="fade-left" data-aos-delay="100">
-                        <div class="gallery mb-4">
+                        <!-- <div class="gallery mb-4">
                             <div class="image-container position-relative overflow-hidden rounded shadow-lg">
                                 <img src="img/19.png" class="img-fluid w-100" alt="Financement">
                             </div>
-                        </div>
+                        </div> -->
 
                         <div class="card border-success">
                             <div class="card-header bg-success text-white">
@@ -549,7 +577,9 @@
                     <i class="bi bi-geo-alt icon"></i>
                     <div class="address">
                         <h3> <strong>Adresse</strong> </h3>
-                        <p>Antanarivo </p> <span>(Madagascar)</span>
+                        <p>Antananarivo </p> <span>(Madagascar)</span>
+                        <br><br>
+                        <p>Amiens </p> <span>(France)</span>
                         <br><br>
                         <p>Zogbadjè Calavi</p> <span>(Bénin)</span>
                     </div>
@@ -572,7 +602,7 @@
                             <span>00 229 01 66 29 01 02 (WhatsApp)</span>
                             <br><br>
                             <strong>E-mail:</strong>
-                            <span>sionradiogospel@gmail.com</span>
+                            <span>contact@sionradiotv.com</span>
                         </p>
                     </div>
                 </div>
@@ -606,6 +636,40 @@
 
     <a href="#" id="scroll-top" class="scroll-top d-flex align-items-center justify-content-center"><i
             class="bi bi-arrow-up-short"></i></a>
+
+
+            <div class="modal fade" id="donationModal" tabindex="-1" aria-labelledby="donationModalLabel" aria-hidden="true">
+                <div class="modal-dialog">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title" id="donationModalLabel">Faire un don</h5>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+                        <div class="modal-body">
+                            <form id="donationForm">
+                                <div class="mb-3">
+                                    <label for="donationAmount" class="form-label">Montant du don (€)</label>
+                                    <input type="number" class="form-control" id="donationAmount" placeholder="Entrez le montant"
+                                        required>
+                                </div>
+                                <div class="mb-3">
+                                    <label for="paymentMethod" class="form-label">Mode de paiement</label>
+                                    <select class="form-select" id="paymentMethod" required>
+                                        <option value="MOBILE">Mobile Money</option>
+                                        <option value="CARD">Carte Bancaire</option>
+                                    </select>
+                                </div>
+                            </form>
+                            <!-- Conteneur pour le bouton généré par FeexPay -->
+                            <div id="render" class="mt-3"></div>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Annuler</button>
+                            <button type="button" class="btn btn-success" id="confirmDonation">Confirmer</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
 
     <!-- Preloader -->
     <div id="preloader"></div>
