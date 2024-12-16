@@ -50,7 +50,7 @@
       <nav id="navmenu" class="navmenu">
         <ul>
           <li><a href="index.html">Accueil<br></a></li>
-          <li><a href="joie.html">La Joie, toute une histoire</a></li>
+          <li><a href="joie.html">La Joie</a></li>
           <li><a href="partenaire.html">Devenez partenaire</a></li>
           <li><a href="mission.html">Mission et Équipe</a></li>
 
@@ -58,12 +58,15 @@
           <!-- Nouveau lien vers la page de financement -->
 
           <li><a href="contact.html">Contact</a></li>
+
+                    <li><a href="direct.html" class="active">En direct</a></li>
+
         </ul>
         <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
       </nav>
 
-      <a class="btn-getstarted" href="direct.html" class="active">
-        <center> En <br> direct</center>
+      <a class="btn-getstarted" href="#" data-bs-toggle="modal" data-bs-target="#donationModal">
+        <center> <strong>FAIRE <br> UN DON</strong> </center>
       </a>
 
     </div>
@@ -372,7 +375,9 @@
           <i class="bi bi-geo-alt icon"></i>
           <div class="address">
             <h3> <strong>Adresse</strong> </h3>
-            <p>Antanarivo </p> <span>(Madagascar)</span>
+            <p>Antananarivo </p> <span>(Madagascar)</span>
+            <br><br>
+            <p>Amiens </p> <span>(France)</span>
             <br><br>
             <p>Zogbadjè Calavi</p> <span>(Bénin)</span>
           </div>
@@ -395,7 +400,7 @@
               <span>00 229 01 66 29 01 02 (WhatsApp)</span>
               <br><br>
               <strong>E-mail:</strong>
-              <span>sionradiogospel@gmail.com</span>
+              <span>contact@sionradiotv.com</span>
             </p>
           </div>
         </div>
@@ -432,6 +437,38 @@
       class="bi bi-arrow-up-short"></i></a>
   <a href="#" id="scroll-top" class="scroll-top d-flex align-items-center justify-content-center"><i
       class="bi bi-arrow-up-short"></i></a>
+
+      <div class="modal fade" id="donationModal" tabindex="-1" aria-labelledby="donationModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title" id="donationModalLabel">Faire un don</h5>
+              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+              <form id="donationForm">
+                <div class="mb-3">
+                  <label for="donationAmount" class="form-label">Montant du don (€)</label>
+                  <input type="number" class="form-control" id="donationAmount" placeholder="Entrez le montant" required>
+                </div>
+                <div class="mb-3">
+                  <label for="paymentMethod" class="form-label">Mode de paiement</label>
+                  <select class="form-select" id="paymentMethod" required>
+                    <option value="MOBILE">Mobile Money</option>
+                    <option value="CARD">Carte Bancaire</option>
+                  </select>
+                </div>
+              </form>
+              <!-- Conteneur pour le bouton généré par FeexPay -->
+              <div id="render" class="mt-3"></div>
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Annuler</button>
+              <button type="button" class="btn btn-success" id="confirmDonation">Confirmer</button>
+            </div>
+          </div>
+        </div>
+      </div>
 
   <!-- Preloader -->
   <div id="preloader"></div>
