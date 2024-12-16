@@ -1,11 +1,13 @@
 document.getElementById('confirmDonation').addEventListener('click', () => {
     const amount = document.getElementById('donationAmount').value;
     const paymentMethod = document.getElementById('paymentMethod').value;
+    const confirmButton = document.getElementById('confirmDonation');
 
     if (!amount || amount <= 0) {
       alert("Veuillez entrer un montant valide.");
       return;
     }
+    confirmButton.disabled = true;
 
     // Initialise FeexPay et affiche le bouton de paiement dans le div "render"
     FeexPayButton.init("render", {
