@@ -1,0 +1,29 @@
+# Activer la réécriture des URL
+RewriteEngine On
+
+# Assurez-vous que les fichiers ou dossiers demandés existent
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+
+# Réécrire toutes les requêtes vers index.html (pour un site avec SPA)
+RewriteRule ^ index.html [L]
+
+# Rediriger les anciennes URL ou créer des alias (optionnel)
+# Exemple : Rediriger "/joie-de-vivre" vers "joie.html"
+Redirect 301 /joie-de-vivre /joie.html
+
+# Désactiver l'affichage des fichiers et dossiers
+Options -Indexes
+
+# Paramètres supplémentaires pour la sécurité (optionnel)
+# Protéger le fichier .htaccess
+<Files .htaccess>
+  Order Allow,Deny
+  Deny from all
+</Files>
+
+# Bloquer l'accès à des fichiers sensibles
+<FilesMatch "\.(env|json|log|sql|ini|sh|bak|old|config|php)$">
+  Order Allow,Deny
+  Deny from all
+</FilesMatch>
